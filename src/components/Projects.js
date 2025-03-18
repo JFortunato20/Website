@@ -20,7 +20,7 @@ const Projects = () => {
     {
       title: 'Software Dev2 Final Project',
       description: 'A restaurant website with integrated pages and a clean design.',
-      link: 'https://github.com/JFortunato20/School-Projects/tree/main/Software-Dev2-Final-Project'
+      link: 'https://github.com/JFortunato20/School-Projects/tree/main/Software-Dev2-Final-Pject'
     }
   ];
 
