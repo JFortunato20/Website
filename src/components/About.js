@@ -1,18 +1,49 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from "react"; 
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGithub } from "react-icons/fa";
-import { FaPython, FaJava } from "react-icons/fa";
-import { FaLinux } from "react-icons/fa";
-import { FaTerminal } from "react-icons/fa";
-import resume from "./Profile-Pic/Resume.pdf";
+import { FaPython, FaJava, FaLinux, FaTerminal } from "react-icons/fa";
+import resume from "./Profile-Pic/Resume.jpg"; // Ensure this path is correct
 
 const About = () => {
   const resumeRef = useRef(null);
   const [fadeIn, setFadeIn] = useState(false);
+  const [isResumeVisible, setIsResumeVisible] = useState(false); // State to toggle visibility
 
   // Function to handle scrolling and fade-in
   const handleScrollToResume = () => {
-    setFadeIn(true);
-    resumeRef.current?.scrollIntoView({ behavior: "smooth" });
+    setIsResumeVisible(true); // Make resume visible when clicked
+
+    // Add a delay before starting the scroll
+    setTimeout(() => {
+      // Scroll to the center of the resume container
+      if (resumeRef.current) {
+        resumeRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center", // Scroll to the center of the container
+        });
+      }
+
+      // After scroll completes, fade in the resume
+      setTimeout(() => {
+        setFadeIn(true);
+      }, 1000); // Adjust the delay (in ms) to allow the scroll effect to finish
+    }, 1000); // 1-second delay before starting the scroll
+  };
+
+  // Function to scroll back to the top of the page and hide the resume
+  const handleHideResume = () => {
+    // Trigger scroll to the top with smooth behavior
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    // Optional: Add fade-out effect for the resume
+    setFadeIn(false);
+
+    // Hide the resume
+    setTimeout(() => {
+      setIsResumeVisible(false);
+    }, 1000); // Wait for fade-out to complete before hiding resume
   };
 
   return (
@@ -112,24 +143,48 @@ const About = () => {
       </div>
 
       {/* Resume Section */}
-      <div
-        ref={resumeRef}
-        className={`resume-container ${fadeIn ? "fade-in" : ""}`}
-      >
-        <h2 className="resume-title">My Resume</h2>
-        <embed
-          src={resume}
-          type="application/pdf"
-          width="80%"
-          height="310px"
-        />
-      </div>
+      {isResumeVisible && (
+        <div
+          ref={resumeRef}
+          className={`resume-container ${fadeIn ? "fade-in" : ""}`}
+          style={{
+            marginTop: "30px", // Add margin to avoid overlap with description
+            display: "flex",
+            flexDirection: "column", // Stack title and image vertically
+            alignItems: "center", // Center content horizontally
+            textAlign: "center", // Center the title text
+            paddingBottom: "20vh", // Padding below the resume to add space
+          }}
+        >
+          <h2 className="resume-title" style={{ marginBottom: "20px" }}>
+            My Resume
+          </h2>
+          <img
+            src={resume} // Use an image tag for the resume
+            alt="Resume"
+            className="resume-img"
+            style={{
+              width: "80%", // Set the width as needed
+              maxWidth: "700px", // Max width to prevent the image from getting too large
+              height: "auto", // Maintain aspect ratio
+              borderRadius: "10px", // Optional: Add rounded corners to the image
+              margin: "0 auto", // Center the image on the x-axis
+            }}
+          />
+        </div>
+      )}
 
       {/* View Resume Button */}
       <div className="button-container">
-        <button className="view-resume-btn" onClick={handleScrollToResume}>
-          View Resume
-        </button>
+        {!isResumeVisible ? (
+          <button className="view-resume-btn" onClick={handleScrollToResume}>
+            View Resume
+          </button>
+        ) : (
+          <button className="hide-resume-btn" onClick={handleHideResume}>
+            Hide Resume
+          </button>
+        )}
       </div>
     </div>
   );

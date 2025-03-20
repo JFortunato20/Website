@@ -10,7 +10,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message sent!'); // You can add backend logic here
+    alert('Message sent!'); // add backend logic here
   };
 
   return (
