@@ -1,0 +1,187 @@
+/* AboutMe.css */
+
+/* Add styles for About Page */
+.about-container {
+    overflow-y: auto; /* Enable scrolling */
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    align-items: center; /* Centering the items vertically */
+    flex-wrap: wrap; /* Allow items to wrap for better responsiveness */
+    min-height: 100vh; /* Ensure the content takes full page height */
+  }
+  
+  .about-heading {
+    font-size: 3rem; /* Large font size for the "About Me" title */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  /* Left Section with Image and Description */
+  .left-section {
+    width: 45%;
+    text-align: center; /* Center the image and text */
+    margin-top: 50vh; /* Push the left section down halfway the page */
+    transform: translateY(-50%); /* Adjust for exact centering */
+  }
+  
+  .headshot {
+    background-image: url('components/Profile-Pic/Abroad\ pic\ .jpg');;
+    background-size: cover; /* Ensures the image covers the div */
+    background-position: center; /* Center the image */
+    border-radius: 50%; /* Circular shape */
+    width: 350px; /* Increased width */
+    height: 350px; /* Increased height */
+    margin-bottom: 20px;
+    margin: auto;
+  }
+  
+  .description {
+    font-size: 1.5em; /* Increased font size for readability */
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 600px; /* Limit the width for better readability */
+    margin:  auto; /* Center the description */
+  }
+  
+  /* Right Section with Pyramid of Icons */
+  .right-section {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50vh; /* Push the right section down halfway the page */
+    transform: translateY(-50%); /* Adjust for exact centering */
+  }
+  
+  /* Styling for the Icon Pyramid */
+  .icon-pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .level {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .level svg {
+    font-size: 3em; /* Adjust icon size */
+    margin: 0 15px; /* Increase spacing between icons */
+    transition: color 0.3s ease;
+  }
+  
+  .icon-description {
+    font-size: 1.rem;
+    margin-top: 10px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    /* For small screens: Stack the content vertically */
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-section, .right-section {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .headshot {
+      width: 200px; /* Adjust size for smaller screens */
+      height: 200px;
+    }
+  
+    .description {
+      font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  .about-container {
+    padding: 20px;
+  }
+  
+  .about-heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  /* View Resume Button (Centered at Bottom) */
+  .button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .view-resume-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .view-resume-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Resume Section */
+  
+  
+  .resume-container.fade-in {
+    opacity: 1;
+  }
+  
+  /* PDF Style */
+  iframe {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: 60vw; /* Adjust width based on viewport */
+    height: 80vh; /* Adjust height based on viewport */
+    border: none; /* Remove border */
+    background-color: transparent; /* Remove gray background */
+    transform: scale(1.1); /* Slight increase for better readability */
+    transform-origin: top center;
+  }
+  
+  
+  
+  
+  .resume-container.fade-in {
+    opacity: 1;
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .icon-description {
+    margin-top: 8px;
+    font-size: 17px;
+    color: #f5f5f5;
+  }
+  
+  
