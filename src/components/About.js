@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react"; 
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase } from "react-icons/fa";
 import { FaPython, FaJava, FaLinux, FaTerminal } from "react-icons/fa";
+import vmwareLogo from "../assets/images/VMware_logo.png"; // Adjust path if necessary
 import resume from "./Profile-Pic/Resume.jpg"; // Ensure this path is correct
 
 const About = () => {
@@ -68,11 +69,20 @@ const About = () => {
         <div className="icon-pyramid">
           {/* Fourth level: Top */}
           <div className="icon-container">
-            <FaTerminal style={{ fontSize: '3em', color: '#4B4B4B' }} />
-            <div className="icon-description">
-              <p>PowerShell</p>
-            </div>
-          </div>
+  <img 
+    src={vmwareLogo} 
+    alt="VMware Workstation" 
+    style={{
+      width: '48px', // Adjust width as needed
+      height: '48px', // Adjust height as needed
+      objectFit: 'contain' // Keeps aspect ratio
+    }} 
+  />
+  <div className="icon-description">
+    <p>VMware</p>
+  </div>
+</div>
+
 
           {/* Third level */}
           <div className="level">
@@ -105,7 +115,7 @@ const About = () => {
               </div>
             </div>
             <div className="icon-container">
-              <FaGithub style={{ fontSize: '3em', color: '#333' }} />
+              <FaDatabase style={{ fontSize: '3em', color: '#00758F' }} />
               <div className="icon-description">
                 <p>SQL</p>
               </div>
@@ -165,7 +175,7 @@ const About = () => {
             className="resume-img"
             style={{
               width: "80%", // Set the width as needed
-              maxWidth: "700px", // Max width to prevent the image from getting too large
+              maxWidth: "600px", // Max width to prevent the image from getting too large
               height: "auto", // Maintain aspect ratio
               borderRadius: "10px", // Optional: Add rounded corners to the image
               margin: "0 auto", // Center the image on the x-axis

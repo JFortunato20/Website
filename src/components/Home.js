@@ -15,11 +15,6 @@ const Home = () => {
           </Link>
         </div>
         <div className="component-item fade-in">
-          <Link to="/experience" style={{ color: 'white', textDecoration: 'none' }}>
-            <h3>Experience</h3>
-          </Link>
-        </div>
-        <div className="component-item fade-in">
           <Link to="/contact" style={{ color: 'white', textDecoration: 'none' }}>
             <h3>Contact</h3>
           </Link>
