@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Projects from './components/Projects';
-import Experience from './components/Experience';
 import Contact from './components/Contact';
 import About from './components/About';
 

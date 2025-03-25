@@ -3,7 +3,7 @@ import React from 'react';
 const Projects = () => {
   const projects = [
     {
-      title: 'Algorithms and Systems Analysis',
+      title: 'Algorithm Analysis+Design',
       description: 'Focused on solving algorithmic challenges and system design problems.',
       link: 'https://github.com/JFortunato20/School-Projects/tree/main/Algorithms-Systems-Analysis'
     },

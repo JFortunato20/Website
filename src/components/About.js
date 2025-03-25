@@ -8,6 +8,7 @@ const About = () => {
   const resumeRef = useRef(null);
   const [fadeIn, setFadeIn] = useState(false);
   const [isResumeVisible, setIsResumeVisible] = useState(false); // State to toggle visibility
+  const [fadeOut, setFadeOut] = useState(false); // Correctly define setFadeOut here
 
   // Function to handle scrolling and fade-in
   const handleScrollToResume = () => {
@@ -26,25 +27,23 @@ const About = () => {
       // After scroll completes, fade in the resume
       setTimeout(() => {
         setFadeIn(true);
-      }, 1000); // Adjust the delay (in ms) to allow the scroll effect to finish
-    }, 1000); // 1-second delay before starting the scroll
+      }, 500); // Adjust the delay (in ms) to allow the scroll effect to finish
+    }, 500); // 1-second delay before starting the scroll
   };
 
-  // Function to scroll back to the top of the page and hide the resume
   const handleHideResume = () => {
-    // Trigger scroll to the top with smooth behavior
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-
-    // Optional: Add fade-out effect for the resume
-    setFadeIn(false);
-
-    // Hide the resume
+    setFadeOut(true); // Start the fade-out animation
     setTimeout(() => {
-      setIsResumeVisible(false);
-    }, 1000); // Wait for fade-out to complete before hiding resume
+      // Scroll to the heading after animation
+      const aboutHeading = document.querySelector('.about-heading');
+      aboutHeading.scrollIntoView({ behavior: 'smooth' });
+      
+      // Optionally, hide the resume completely after animation
+      setTimeout(() => {
+        setIsResumeVisible(false);
+        setFadeOut(false); // Reset fade-out state
+      }, 1000); // Match this duration with the CSS animation duration
+    }, 1000); // Delay before hiding the resume
   };
 
   return (
@@ -56,10 +55,15 @@ const About = () => {
         <div className="headshot"></div>
         <div className="description">
           <p>
-            Hello! I'm a passionate web developer with experience in front-end
-            and back-end technologies. I'm always looking for opportunities to
-            grow and learn. I enjoy problem-solving and creating user-centric
-            applications.
+          Hi, I’m Joseph Fortunato. I’m currently pursuing a bachelor’s degree
+           in Computer Science with a concentration in Software Development and
+            a minor in Cybersecurity. With a deep passion for technology, I’m honing
+            my skills in coding, problem-solving, and securing systems. I’m driven to
+           build a career in software development or cybersecurity, where I can tackle 
+           complex challenges and create impactful solutions. Through my academic journey, 
+           I’m gaining the expertise needed to thrive in the ever-evolving tech industry.
+
+ 
           </p>
         </div>
       </div>
@@ -163,10 +167,10 @@ const About = () => {
             flexDirection: "column", // Stack title and image vertically
             alignItems: "center", // Center content horizontally
             textAlign: "center", // Center the title text
-            paddingBottom: "20vh", // Padding below the resume to add space
+            paddingBottom: "30vh", // Padding below the resume to add space
           }}
         >
-          <h2 className="resume-title" style={{ marginBottom: "20px" }}>
+          <h2 className="resume-title" style={{ marginBottom: "-50px" }}>
             My Resume
           </h2>
           <img

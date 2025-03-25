@@ -322,7 +322,7 @@ html, body {
 }
 
 .about-heading {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
   text-align: center;
   width: 100%;
@@ -367,17 +367,18 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transform: translateY(-90px); /* Move up by 30px */
 }
 
 .level {
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .level svg {
-  font-size: 3em;
-  margin: 0 15px;
+  font-size: 4em;
+  margin: 0 40px;
   transition: color 0.3s ease;
 }
 
@@ -455,6 +456,20 @@ html, body {
   transform: translateY(0); /* Move to normal position */
   animation: fadeInFromRight .5s ease-in-out forwards;
 }
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+.resume-container.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
 
 
 .resume-container img {
@@ -462,18 +477,19 @@ html, body {
   max-width: 450px;
   height: auto;
   border-radius: 10px;
-  
+  transform: translateY(10%);;
 }
 
 .hide-resume-btn {
   background-color: #27bfed;
-  color: rgb(255, 255, 255);
+  color: white;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
+  transition: background-color 0.5s ease;
+  margin: 20px 0;
 }
 
 .hide-resume-btn:hover {
@@ -495,6 +511,7 @@ html, body {
 .icon-container {
   opacity: 0;
   animation: fadeInFromRight 1s ease-in-out forwards;
+  
 }
 
 .icon-container:nth-child(1) { animation-delay: 0.1s; }
