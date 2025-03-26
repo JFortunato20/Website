@@ -57,7 +57,7 @@ function App() {
 
 function AppWrapper() {
   return (
-    <Router>
+    <Router basename="/Website"> {/* Match the repository name */}
       <App />
     </Router>
   );
