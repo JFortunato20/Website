@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.89fff95d.css",
-    "main.js": "/static/js/main.3ea23b45.js",
-    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
-    "static/media/webBack.jpg": "/static/media/webBack.0b9c373c38b6dbbbaf99.jpg",
-    "static/media/Abroad pic .jpg": "/static/media/Abroad pic .7b177a4c5cd5b1586436.jpg",
-    "static/media/Resume.jpg": "/static/media/Resume.2e90d32c764255600d92.jpg",
-    "static/media/VMware_logo.png": "/static/media/VMware_logo.dc75289c404ae8a33b85.png",
-    "index.html": "/index.html",
-    "main.89fff95d.css.map": "/static/css/main.89fff95d.css.map",
-    "main.3ea23b45.js.map": "/static/js/main.3ea23b45.js.map",
-    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+    "main.css": "/Website/static/css/main.f8a2be98.css",
+    "main.js": "/Website/static/js/main.40e54a28.js",
+    "static/js/453.1407b060.chunk.js": "/Website/static/js/453.1407b060.chunk.js",
+    "static/media/webBack.jpg": "/Website/static/media/webBack.0b9c373c38b6dbbbaf99.jpg",
+    "static/media/Abroad pic .jpg": "/Website/static/media/Abroad pic .7b177a4c5cd5b1586436.jpg",
+    "static/media/JPF-Resume.jpg": "/Website/static/media/JPF-Resume.a380c464d527af056c5d.jpg",
+    "static/media/VMware_logo.png": "/Website/static/media/VMware_logo.dc75289c404ae8a33b85.png",
+    "index.html": "/Website/index.html",
+    "main.f8a2be98.css.map": "/Website/static/css/main.f8a2be98.css.map",
+    "main.40e54a28.js.map": "/Website/static/js/main.40e54a28.js.map",
+    "453.1407b060.chunk.js.map": "/Website/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89fff95d.css",
-    "static/js/main.3ea23b45.js"
+    "static/css/main.f8a2be98.css",
+    "static/js/main.40e54a28.js"
   ]
 }
