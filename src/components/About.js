@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaDatabase } from "react-icons/fa";
 import { FaPython, FaJava, FaLinux, FaTerminal } from "react-icons/fa";
 import vmwareLogo from "../assets/images/VMware_logo.png"; // Adjust path if necessary
-import resume from "./Profile-Pic/Resume.jpg"; // Ensure this path is correct
+import resume from "./Profile-Pic/JPF-Resume.jpg"; // Ensure this path is correct
 
 const About = () => {
   const resumeRef = useRef(null);
@@ -42,8 +42,8 @@ const About = () => {
       setTimeout(() => {
         setIsResumeVisible(false);
         setFadeOut(false); // Reset fade-out state
-      }, 1000); // Match this duration with the CSS animation duration
-    }, 1000); // Delay before hiding the resume
+      }, 500); // Match this duration with the CSS animation duration
+    }, 500); // Delay before hiding the resume
   };
 
   return (
@@ -160,17 +160,17 @@ const About = () => {
       {isResumeVisible && (
         <div
           ref={resumeRef}
-          className={`resume-container ${fadeIn ? "fade-in" : ""}`}
+          className={`resume-container ${fadeIn ? "fade-in" : ""} ${fadeOut ? "fade-out" : ""}`}
           style={{
             marginTop: "30px", // Add margin to avoid overlap with description
             display: "flex",
             flexDirection: "column", // Stack title and image vertically
             alignItems: "center", // Center content horizontally
             textAlign: "center", // Center the title text
-            paddingBottom: "30vh", // Padding below the resume to add space
+            paddingBottom: "30vh" // Padding below the resume to add space
           }}
         >
-          <h2 className="resume-title" style={{ marginBottom: "-50px" }}>
+          <h2 className="resume-title" style={{ marginBottom: "-350px" }}>
             My Resume
           </h2>
           <img
@@ -178,11 +178,13 @@ const About = () => {
             alt="Resume"
             className="resume-img"
             style={{
-              width: "80%", // Set the width as needed
-              maxWidth: "600px", // Max width to prevent the image from getting too large
+              paddingTop: "0vh",
+              width: "100%", // Set the width as needed
+              maxWidth: "750px", // Max width to prevent the image from getting too large
               height: "auto", // Maintain aspect ratio
-              borderRadius: "10px", // Optional: Add rounded corners to the image
+              borderRadius: "0px", // Optional: Add rounded corners to the image
               margin: "0 auto", // Center the image on the x-axis
+              paddingBottom: "12vh"
             }}
           />
         </div>
