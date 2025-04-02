@@ -307,6 +307,13 @@ html, body {
 
 .social-links a:hover {
   color: #4c6ef5;
+
+}
+
+.contact-image {
+  width: 200px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Makes it circular */
 }
 /* AboutMe.css */
 

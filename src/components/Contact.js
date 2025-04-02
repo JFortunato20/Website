@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import image from "./Profile-Pic/Progress.jpg"; // Adjust the path based on your project structure
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +16,9 @@ const Contact = () => {
 
   return (
     <div className={`contact-container ${isVisible ? 'fade-in' : ''}`}>
+
+<img src={image} alt="Profile" className="contact-image" /> {/* Added image here */}
+
       <h2>Contact Me</h2>
       <p className="description">
         I'd love to connect! Feel free to reach out via email or check out my social profiles below.
